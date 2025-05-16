@@ -1,6 +1,8 @@
 package com.luv2code.springcoredemo.common;
 
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
@@ -17,5 +19,15 @@ public class BaseballCoach implements Coach{
     @Override
     public String dailyPractice() {
         return "This is Baseball coach";
+    }
+
+    @PostConstruct
+    public void doMyStartUpStuff(){
+        System.out.println("In post Construct");
+    }
+
+    @PreDestroy
+    public void doMyCleanUpStuff(){
+        System.out.println("In pre Destroy");
     }
 }
