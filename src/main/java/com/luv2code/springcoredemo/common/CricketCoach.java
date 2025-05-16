@@ -1,4 +1,4 @@
-package com.luv2code.utils;
+package com.luv2code.springcoredemo.common;
 
 import org.springframework.stereotype.Component;
 
@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class CricketCoach implements Coach{
     @Override
     public String dailyPractice() {
-        return "Practice fast bowling for 15 minutes!!---nananan";
+        return "Practice fast bowling for 15 minutes!!- to check setter";
     }
 }
