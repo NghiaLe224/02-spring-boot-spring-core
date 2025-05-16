@@ -22,14 +22,19 @@ public class DemoController {
 //        this.myCoach = coach;
 //    }
 
-    @Autowired
-    public DemoController(@Qualifier("baseballCoach") Coach coach,
-                          @Qualifier("baseballCoach") Coach anotherCoach){
-        System.out.println("In Constructor: " + this.getClass().getSimpleName());
-        this.myCoach = coach;
-        this.anotherCoach = anotherCoach;
-        System.out.println("same bean and myCoach == anotherCoach? " + (myCoach == anotherCoach));
+//    @Autowired
+//    public DemoController(@Qualifier("baseballCoach") Coach coach,
+//                          @Qualifier("baseballCoach") Coach anotherCoach){
+//        System.out.println("In Constructor: " + this.getClass().getSimpleName());
+//        this.myCoach = coach;
+//        this.anotherCoach = anotherCoach;
+//        System.out.println("same bean and myCoach == anotherCoach? " + (myCoach == anotherCoach));
+//
+//    }
 
+    @Autowired
+    public DemoController(@Qualifier("aquatic") Coach coach){
+        this.myCoach = coach;
     }
 
     @GetMapping("/getdailyworkout")
